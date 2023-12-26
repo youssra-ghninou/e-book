@@ -20,6 +20,7 @@ public class Book {
 		this.author = author;
 		this.price = price;
 	}
+
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -13,11 +13,11 @@ import com.bookStore.repository.MyBookRepositroy;
 public class MyBookListService {
 	@Autowired
 	public MyBookRepositroy mybook;
-	public void saveMyBooks(MyBookList book) {
-		mybook.save(book);
+	public MyBookList saveMyBooks(MyBookList book) {
+		return mybook.save(book); // Return the saved MyBookList object
 	}
 
-public List<MyBookList> getAllMyBooks(){
+	public List<MyBookList> getAllMyBooks(){
 	return mybook.findAll();
 }
 public void deleteById(int id) {

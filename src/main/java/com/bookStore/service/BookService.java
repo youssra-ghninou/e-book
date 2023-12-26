@@ -1,30 +1,34 @@
 package com.bookStore.service;
 
-import java.util.List;
-
+import com.bookStore.entity.Book;
+import com.bookStore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bookStore.entity.Book;
-import com.bookStore.repository.BookRepository;
+import java.util.List;
+import java.util.Optional;
 
-
-@Service 
+@Service
 public class BookService {
-	
+
 	@Autowired
-	private BookRepository bRepo;
-	
-	public void save(Book b) {
-		bRepo.save(b);
-	}
-	
-	public List<Book> getAllBook(){
-		return bRepo.findAll();
-	}
-	
-	public Book getBookById(int id) {
-		return bRepo.findById(id).get();
+	private BookRepository bookRepository;
+
+	public List<Book> findAll() {
+		return bookRepository.findAll();
 	}
 
+	public Optional<Book> findById(Integer id) {
+		return bookRepository.findById(id);
+	}
+
+	public Book save(Book book) {
+		return bookRepository.save(book);
+	}
+
+	public void deleteById(Integer id) {
+		bookRepository.deleteById(id);
+	}
+
+	// Add more services as needed
 }
