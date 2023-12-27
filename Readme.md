@@ -4,6 +4,8 @@
 
 ## New solution : https://springdoc.org/#migrating-from-springfox
 
+## Doc available at : http://localhost:1001/swagger-ui/index.html#/
+
 This issue is caused by Spring Fox 3.0.0 not supporting new PathPattern Based Path Matching Strategy for Spring MVC which is now the new default from spring-boot 2.6.0.
 
 There are actually some workarounds for this issue like:
