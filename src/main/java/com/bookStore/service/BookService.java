@@ -30,5 +30,4 @@ public class BookService {
 		bookRepository.deleteById(id);
 	}
 
-	// Add more services as needed
 }
